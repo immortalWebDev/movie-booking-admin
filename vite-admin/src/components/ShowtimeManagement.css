@@ -1,0 +1,47 @@
+.showtime-management-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .showtime-management-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .showtime-management-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .showtime-management-container label {
+    margin-bottom: 20px;
+  }
+  
+  .showtime-management-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    width: 18rem;
+  }
+  
+  .showtime-management-container button {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .showtime-management-container button:hover {
+    background-color: #0056b3;
+  }
+  

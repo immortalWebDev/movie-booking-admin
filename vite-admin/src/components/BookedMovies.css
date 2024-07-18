@@ -1,0 +1,35 @@
+.booked-movies-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booked-movies-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .booked-movies-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .booked-movies-container li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booked-movies-container li strong {
+    font-weight: bold;
+  }
+  
+  .booked-movies-container li em {
+    font-style: italic;
+  }
+  
