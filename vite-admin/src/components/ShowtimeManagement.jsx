@@ -5,16 +5,21 @@ import './ShowtimeManagement.css';
 
 const ShowtimeManagement = () => {
   const [showtime, setShowtime] = useState('');
+  const [loading,setLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true)
       await addDoc(collection(db, 'showtimes'), { time: showtime });
       setShowtime('');
       alert('Showtime added successfully');
     } catch (error) {
       console.error('Error adding showtime: ', error);
       alert('Error adding showtime');
+    }
+    finally{
+      setLoading(false)
     }
   };
 
@@ -23,7 +28,7 @@ const ShowtimeManagement = () => {
       <h2>Showtime Management</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Showtime:
+          Showtime:{' '}
           <input
             type="text"
             value={showtime}
@@ -31,7 +36,7 @@ const ShowtimeManagement = () => {
             required
           />
         </label>
-        <button type="submit">Add Showtime</button>
+        <button type="submit">{loading ? "Adding..." : "Add showtime"}</button>
       </form>
     </div>
   );
