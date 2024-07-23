@@ -7,14 +7,20 @@ import BookedMovies from './components/BookedMovie';
 import ShowtimeManagement from './components/ShowtimeManagement';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import { AuthProvider, useAuth } from './components/AuthContext';
+// import { AuthProvider, useAuth } from './components/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import './styles.css';
+import { useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import store from './store/store';
 
 const AppContent = () => {
-  const { currentUser } = useAuth();
+  // const { currentUser } = useAuth();
+  const currentUser = useSelector((state) => state.auth.currentUser);
+
+
 
   return (
     <>
@@ -27,7 +33,7 @@ const AppContent = () => {
 
           <Route path="/admin/login" element={<Login />} />
 
-
+          <Route path="/*" element={<PrivateRoute element={Dashboard} />} />
           <Route path="/admin/dashboard/*" element={<PrivateRoute element={Dashboard} />} />
           <Route path="/add-category" element={<PrivateRoute element={AddCategory} />} />
           <Route path="/add-movie" element={<PrivateRoute element={AddMovie} />} />
@@ -42,11 +48,13 @@ const AppContent = () => {
 };
 
 const App = () => (
-  <AuthProvider>
+  // <AuthProvider>
+  <Provider store={store}>
     <Router>
       <AppContent />
     </Router>
-  </AuthProvider>
+    </Provider>
+  // </AuthProvider>
 );
 
 export default App;
