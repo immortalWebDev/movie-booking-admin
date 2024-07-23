@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { login } from "../store/authSlice";
+import { useDispatch } from "react-redux";
 import "./Login.css";
 
 const Login = () => {
@@ -11,13 +13,28 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      const user = userCredential.user;
+
+      // console.log(user)
+      // const idToken = await user.getIdToken();
+      // console.log(idToken === user.accessToken)
+      dispatch(
+        login({ idToken: user.accessToken, uid: user.uid, email: user.email })
+      );
+
       navigate("/admin/dashboard");
     } catch (error) {
       setError(error.message);

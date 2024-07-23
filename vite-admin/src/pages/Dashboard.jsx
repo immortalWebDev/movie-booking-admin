@@ -1,23 +1,22 @@
-import React from 'react';
-import { Routes, Route} from 'react-router-dom';
-// import Sidebar from '../components/Sidebar';
-import AddCategory from '../components/AddCategory';
-import AddMovie from '../components/AddMovie';
-import ShowtimeManagement from '../components/ShowtimeManagement';
-import BookedMovies from '../components/BookedMovie';
-import { useAuth } from '../components/AuthContext';
-import './Dashboard.css'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import AddCategory from "../components/AddCategory";
+import AddMovie from "../components/AddMovie";
+import ShowtimeManagement from "../components/ShowtimeManagement";
+import BookedMovies from "../components/BookedMovie";
+import "./Dashboard.css";
 
 const Dashboard = () => {
-  const { currentUser } = useAuth(); 
+  const currentUser = useSelector((state) => state.auth.currentUser);
 
   return (
     <div className="dashboard-container">
-      <div className='welcome'>
-      <h2>Welcome Admin Piyush</h2>
-      <p>Email: {currentUser.email}</p>
+      <div className="welcome">
+        <h2>Welcome Admin Piyush</h2>
+        <p>Email: {currentUser.email}</p>
       </div>
-      {/* <Sidebar /> */}
+
       <div>
         <Routes>
           <Route path="add-category" element={<AddCategory />} />
