@@ -1,37 +1,3 @@
 body {
     font-family: Arial, sans-serif;
   }
-  
-  .header{
-    background-color: #4b4949;
-    color: white;
-    text-align: center;
-    padding: 1px;
-  }
-  
-  .sidebar {
-    width: 200px;
-    float: left;
-    background-color: #f4f4f4;
-    padding: 1em;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin: 0.5em 0;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .dashboard-content {
-    margin-left: 220px;
-    padding: 1em;
-  }
-  
