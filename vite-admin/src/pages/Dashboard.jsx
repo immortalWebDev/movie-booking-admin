@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import AddCategory from "../components/AddCategory";
+import AddCategory from "../components/AddCategory/AddCategory";
 import AddMovie from "../components/AddMovie";
 import ShowtimeManagement from "../components/ShowtimeManagement";
 import BookedMovies from "../components/BookedMovie";
