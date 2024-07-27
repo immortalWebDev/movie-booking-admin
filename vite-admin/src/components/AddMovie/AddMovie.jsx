@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../firebase';
+import { db } from '../../firebase';
 import { collection, getDocs, addDoc } from 'firebase/firestore';
 import './AddMovie.css';
 
@@ -33,7 +33,8 @@ const AddMovie = () => {
       setCategoriesLoading(true)
       const querySnapshot = await getDocs(collection(db, 'categories'));
       const categoriesList = querySnapshot.docs.map(doc => doc.data().name);
-      setCategories(categoriesList);
+      setCategories(categoriesList.sort((a,b) => a.localeCompare(b)));
+      // console.log(categoriesList)
       setCategoriesLoading(false)
     };
     fetchCategories();
@@ -168,5 +169,3 @@ const AddMovie = () => {
 };
 
 export default AddMovie;
-
-
