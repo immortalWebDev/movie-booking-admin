@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import AddCategory from "../components/AddCategory/AddCategory";
-import AddMovie from "../components/AddMovie/AddMovie";
-import ShowtimeManagement from "../components/ShowtimeManagement";
-import BookedMovies from "../components/BookedMovie";
+import AddCategory from "../../components/AddCategory/AddCategory";
+import AddMovie from "../../components/AddMovie/AddMovie";
+import ShowtimeManagement from "../../components/ShowtimeManagement/ShowtimeManagement";
+import BookedMovies from "../../components/BookedMovies/BookedMovie";
 import "./Dashboard.css";
 
 const Dashboard = () => {
