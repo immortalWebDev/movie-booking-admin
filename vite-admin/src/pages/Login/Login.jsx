@@ -35,7 +35,7 @@ const Login = () => {
         login({ idToken: user.accessToken, uid: user.uid, email: user.email })
       );
 
-      navigate("/admin/dashboard");
+      navigate("/dashboard");
     } catch (error) {
       setError(error.message);
     } finally {

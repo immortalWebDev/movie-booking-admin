@@ -17,10 +17,10 @@ const AppRouter = () => {
     <div className="content">
       {currentUser && <Sidebar />}
       <Routes>
-        <Route path="/admin/login" element={<Login />} />
+        <Route path="/" element={<Login/>} />
 
         <Route
-          path="/admin/dashboard/*"
+          path="/dashboard/*"
           element={<PrivateRoute element={Dashboard} />}
         />
         <Route

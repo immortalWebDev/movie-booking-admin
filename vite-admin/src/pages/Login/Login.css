@@ -1,13 +1,12 @@
 .login-container {
-  max-width: 400px;
-  /* margin: 80px auto; */
+  max-width: 90%;
+  width: 400px;
   padding: 30px;
   padding-top: 15px;
   border: 5px solid #ccc;
   border-radius: 20px;
   background-color: #f9f9f9;
-  margin-top: 8rem;
-    margin-left: 26.5rem;
+  margin: 8rem auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,4 +50,23 @@
   color: #e74c3c;
   font-size: 14px;
   text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 478px) {
+  .login-container {
+    margin: 9rem auto;
+    width: auto;
+    padding: 20px;
+    border-width: 4px;
+  }
+
+  .login-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .login-container button {
+    font-size: 14px;
+  }
 }
