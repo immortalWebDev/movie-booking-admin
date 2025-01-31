@@ -1,24 +1,13 @@
-  .sidebar {
+   .sidebar {
     width: 200px;
-    float: left;
     background-color: #f4f4f4;
-    border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    padding: 1em;
-    margin-top: -15px;
-    display: flex;
-    height: 80vh;
-    flex-direction: column;
-    position: fixed; 
-
-    
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
+    padding: 20px;
+    position: fixed;
+    top: 60px; 
+    bottom: 30px; 
+    overflow-y: auto;
+  }
   
   .sidebar-heading {
     font-size: 24px;
@@ -26,11 +15,6 @@
     margin-bottom: 20px;
     text-align: center;
   }
-
-  .sidebar ul {
-    list-style-type: disclosure-closed;
-    padding: 15px;
-}
   
   .sidebar-menu {
     list-style: none;
@@ -71,3 +55,32 @@
     background-color: #c82333;
   }
   
+  @media (max-width: 1115px) {
+    .sidebar {
+      width: 100%;
+      position: relative;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .sidebar-heading {
+      font-size: 20px;
+    }
+  
+    .sidebar-link {
+      font-size: 16px;
+      padding: 8px;
+    }
+  
+    .sidebar-logout {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }

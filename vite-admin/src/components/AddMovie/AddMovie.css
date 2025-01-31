@@ -56,4 +56,30 @@
     text-align: center;
     margin-top: 10px;
   }
+   
+
+   
+  @media (max-width: 1115px) {
+    .add-movie-form {
+      max-width: 80%;
+      margin: 20px 10px;
+    }
+  }
   
+  @media (max-width: 480px) {
+    .add-movie-form {
+      padding: 10px;
+    }
+  
+    .add-movie-form label,
+    .add-movie-form input,
+    .add-movie-form textarea,
+    .add-movie-form select,
+    .add-movie-form button {
+      font-size: 14px;
+    }
+  
+    .add-movie-form h2 {
+      font-size: 20px;
+    }
+  }

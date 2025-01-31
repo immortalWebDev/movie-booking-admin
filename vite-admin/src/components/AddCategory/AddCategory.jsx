@@ -25,6 +25,7 @@ const AddCategory = () => {
   };
 
   return (
+    <div className='add-category-wrapper'>
     <div className="add-category-container">
       <h2>Add Category</h2>
       <form onSubmit={handleSubmit}>
@@ -39,6 +40,7 @@ const AddCategory = () => {
         </label>
         <button type="submit">{loading ? "Adding Category..." : "Add Category"}</button>
       </form>
+    </div>
     </div>
   );
 };

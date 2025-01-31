@@ -52,7 +52,6 @@
   text-align: center;
 }
 
-/* Media Queries */
 @media (max-width: 478px) {
   .login-container {
     margin: 9rem auto;
