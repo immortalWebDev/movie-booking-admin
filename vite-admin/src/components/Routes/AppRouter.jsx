@@ -17,7 +17,7 @@ const AppRouter = () => {
     <div className="content">
       {currentUser && <Sidebar />}
       <Routes>
-        <Route path="/" element={<Login/>} />
+        {!currentUser && <Route path="/" element={<Login/>} />}
 
         <Route
           path="/dashboard/*"

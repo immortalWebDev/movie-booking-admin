@@ -63,6 +63,7 @@ const Login = () => {
         />
         <button type="submit"> {loading ? "Logging in..." : "Login"}</button>
         {error && <p className="error-message">{error}</p>}
+        <p style={{textAlign:"center"}}>Email/pass :piyush.webstack@gmail.com</p>
       </form>
     </div>
   );
